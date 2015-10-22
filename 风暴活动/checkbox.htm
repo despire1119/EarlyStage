@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1"/>
+<meta name="keywords" content="关键字，关键字，关键字 " />
+<meta name="description" content="关键字，关键字，关键字" />
+
+<link href="http://www.houxue.com/js/jquery/external/bxslider/jquery.bxslider.css" rel="stylesheet" />
+<link href="playground.css" rel="stylesheet" />
+
+<title>风搞活动—抽奖页面</title>
+<style>
+body, ol, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dd,figure, form, input, textarea{margin: 0;padding: 0;}
+
+.g_title{
+	position:relative;
+	top:4%;
+	margin-left:auto;
+	margin-right:auto;
+	background:url(images2-1/m-title_03.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:17%;
+}
+.g_box{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	top:3%;
+	left:1%;
+	height:65%;
+	width:100%;
+}
+img{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.g_box ul li.anim{
+	-webkit-animation-name: imgAnim;
+	-webkit-animation-iteration-count: 2;
+	-webkit-animation-duration: 0.25s;
+	-webkit-transform-origin: center bottom;
+}
+@-webkit-keyframes imgAnim{
+	0%{-webkit-transform:rotate(0);}
+	25%{-webkit-transform:rotate(-8deg);}
+	50%{-webkit-transform:rotate(0);}
+	75%{-webkit-transform:rotate(8deg);}
+	100%{-webkit-transform:rotate(0);}
+}
+.g_btn{
+	position:relative;
+	height:11%;
+	margin-left:auto;
+	margin-right:auto;
+	background:url(images2-1/m-2_16.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+}
+.g_tip1{
+	position:relative; 
+	height:65px; 
+	width:35%;
+	float:left;
+	top:35px;
+	left:1%;
+	background:url(images2-1/m-2-1-1_04.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+}
+.g_tip2{
+	height:65px; 
+	width:30%;
+	float:right;
+	top:35px;
+	right:3%;
+	position:relative;
+	background:url(images2-1/m-2-1-1_08.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	}
+.g_tip1.anim{
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-name: imgShadowAnim;
+}
+@-webkit-keyframes imgShadowAnim{
+	0%{-webkit-transform:scale(1);}
+	25%{-webkit-transform:scale(1.2);}
+	50%{-webkit-transform:scale(1);}
+	75%{-webkit-transform:scale(1.2);}
+	100%{-webkit-transform:scale(1);}
+}
+.g_tip2.anim{
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-name: imgShadowAnim;
+}
+@-webkit-keyframes imgShadowAnim{
+	0%{-webkit-transform:scale(1);}
+	25%{-webkit-transform:scale(1.2);}
+	50%{-webkit-transform:scale(1);}
+	75%{-webkit-transform:scale(1.2);}
+	100%{-webkit-transform:scale(1);}
+}
+.g_cover{
+	background: #000;
+	background-size: 100% 100%;
+	height:100%;
+	width: 100%;
+	position:fixed;
+	z-index: 10;
+	top:0;
+	left: 0;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.7;
+	opacity:0.7;
+}
+	
+.g_con{
+	z-index:20;
+	width:80%;
+	height:64%;
+	min-height:350px;
+	position:fixed;
+	top: 15%; 
+	left:8%;
+	background:url(images2-1/m-2-3-1_03.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	border-radius: 30px; 
+	background-size:100% 100%;
+}
+
+.g_coup{
+	z-index:20;
+	width:80%;
+	height:70%;
+	min-height:300px;
+	position:fixed;
+	top: 10%; 
+	left:8%;
+	background:url(images2-1/m-2-bg.png) no-repeat; 
+	background-size:100% 100%;
+	display:none;
+}
+.g_pri{
+	text-align:center;
+	position:fixed;
+	top:25%;
+	width:80%;
+	font-family:微软雅黑; 
+	font-weight:bold; 
+	font-size:40px; 
+	color:#ff503b;
+}
+.g_info{
+	display:block;
+	text-align:center;
+	position:relative;
+	top:10%;
+	width:80%;
+	font-family:微软雅黑; 
+	font-weight:bold; 
+	font-size:20px; 
+	color:#e13032;
+	margin-left:auto;
+	margin-right:auto;
+}
+.txt{
+	border: 2px solid #ffff00;
+	background:#FFF;
+	width:80%;
+	height:12%;
+	border-radius:10px;
+	font-size:14px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.check{
+	border: 2px solid #ffff00;
+	background:#FFF;
+	width:45%;
+	height:8%;
+	border-radius:10px;
+	font-size:14px;
+	left:10%;
+}
+
+.info{
+	text-align:center;
+	float:left;
+	display:inline;
+	background:#FFF;
+	height:42px;
+	width:10%;
+}
+.g_btn2{
+	position:relative;
+	background:url(images2-1/m-2-3-1-02_06.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	width:70%;
+    height:20%;
+	margin-left:auto;
+	margin-right:auto;
+	bottom:-18%;
+}
+.g_btn3{
+	z-index:30;
+	position:relative;
+	background:url(images2-1/m-2-btn3.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	width:70%;
+    height:17%;
+	margin-left:auto;
+	margin-right:auto;
+	bottom:-58%;
+}
+.clo_btn{
+	z-index:50;
+	position:relative;
+	top:-5%;
+	left:90%;
+	background:url(images2-1/m-2-3_clo.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	
+	width:57px;
+	height:57px;
+}
+.g_share{
+	position:fixed; 
+	z-index:20;
+	display:none;
+}
+.s_title{
+	display:inline;
+	float:left;
+	text-align:center;
+	width:70%;
+	top:18%;
+	position:fixed; 
+	font-family:微软雅黑; 
+	font-size:20px; 
+	font-weight:bold;
+	font-style:italic;
+	color:#fdfdfd; 
+}
+.s_arrow{
+	background:url(images2-1/m-2-5_03.png) no-repeat; 
+	background-size:contain;
+	background-position:center;
+	position:fixed; 
+	width:16%; 
+	height:13%;
+	top:7%; 
+	left:75%
+}
+.s_ex{
+	background:url(images2-1/m-2-5_07.png) no-repeat; 
+	background-size:contain;
+	background-position:center; 
+	position:fixed; 
+	width:80%; 
+	height:60%; 
+	top:25%;
+	left:10%; 
+}
+.clearfix:after{ content: '\200B'; display: block; clear: both; height: 0; overflow: hidden; visibility: hidden;}
+.clearfix{zoom:1;}  /*清除浮动*/
+.pos1{
+	top:13%;
+	position:relative;
+	
+}
+.pos2{
+	top:15%; 
+	position:relative;
+}
+.pos3{
+	top:18%; 
+	position:relative;
+}
+.highlight{
+	 -webkit-box-shadow:0 0 10px rgba(186, 113, 21, 1);  
+  	-moz-box-shadow:0 0 10px rgba(186, 113, 21, 1);  
+ 	 box-shadow:0 0 10px rgba(186, 113, 21, 1);  　　
+}
+.it1{
+	border:none; 
+	background:none; 
+	height:100%; 
+	width:75%; 
+	float:right;
+	outline:none;
+}
+.it2{
+	border:none; 
+	background:none; 
+	height:100%; 
+	width:75%; 
+	float:right;
+	outline:none;
+}
+.it3{
+	border:none; 
+	background:none; 
+	height:100%; 
+	width:100%; 
+	float:right;
+	outline:none;
+}
+@-webkit-keyframes greenPulse {
+	from { background-color: #ff6d6e; -webkit-box-shadow: 0 0 9px #333; }
+	50% { background-color: #999; -webkit-box-shadow: 0 0 18px #999; }
+	to { background-color: #ff6d6e; -webkit-box-shadow: 0 0 9px #333; }
+		}
+.large.button{ padding:0 0;}
+.button 
+{
+	padding:0 0;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite; 
+}
+
+.green.button
+{
+	-webkit-animation-name: greenPulse; 		
+	-webkit-animation-duration: 3s;
+}
+
+.g_c_btn{
+	position:relative;
+	float:right;
+	top:9%;
+	right:10%;
+	width:30%;
+	height:9%;
+	line-height:245%;
+	font-weight:bold;
+	color:#FFF;
+	text-align:center;
+}
+.in_name{
+	float:left; 
+	height:100%; 
+	width:25%; 
+	background:url(images2-1/m-2-3-name.png) no-repeat; 
+	background-size:contain;
+	background-position:center;
+}
+.in_tel{
+	float:left; 
+	height:100%; 
+	width:25%; 
+	background:url(images2-1/m-2-3-tel.png) no-repeat; 
+	background-size:contain;
+	background-position:center;
+}
+
+#cover{
+	display:none;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a{
+	background: #FFF;
+	border:1px solid #f7cc17;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #f7cc17;
+}
+</style>
+<link href="http://www.houxue.com/css/common_base.css" type="text/css"  rel="stylesheet" />
+</head>
+
+<body>
+<div class="g_bg">
+<div class="g_title"></div>
+<div class="g_box">
+	<div class="g_tip1"></div>
+	<div class="g_tip2"></div>
+	<ul class="bxslider">
+    	<li><img src="images2-1/m-2-04_03.png" /></li>
+    	<li><img src="images2-1/m-2-01_03.png" /></li>
+        <li><img src="images2-1/m-2-02_03.png" /></li>
+        <li><img src="images2-1/m-2-03_03.png" /></li>
+        <li><img src="images2-1/m-2-00_03.png" /></li>
+    </ul>
+</div>
+<div class="g_btn"></div>
+</div>
+
+
+<div id="cover">
+	<!--cover-->
+	<div class="g_cover"></div>
+    
+    <!--获取用户信息-->
+	<div class="g_con">
+  		<div class="clo_btn"></div>
+        <span class="g_info">获得300元报名代金券</span>
+    	<div class="txt pos1">
+        <div class="in_name"></div>
+        <input class="it1" type="text" name="fname"/>
+        </div>
+  		<div class="txt pos2">
+        <div class="in_tel"></div>
+        <input class="it2" type="text" name="lname" />
+        </div>
+  		<div class="check pos3">
+        <input class="it3" type="text" name="lname" />
+        </div>
+        <div class="g_c_btn large green button">获取验证码</div>
+        <div class="g_btn2"></div>
+    </div>
+    
+    <!--获奖代金券展示-->
+    <div class="g_coup">
+    	<div class="clo_btn"></div>
+    	<span class="g_pri">￥300</span>
+        <div class="g_btn3"></div>
+    </div>
+    
+    <!--忽悠用户分享-->
+    <div class="g_share">
+    	<span class="s_title">和朋友们手拉手上课去！</span>
+        <div class="s_arrow"></div>
+        <div class="s_ex"></div>
+    </div>
+</div>
+
+
+
+<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="http://www.houxue.com/js/jquery/external/bxslider/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="http://www.houxue.com/js/jquery/external/touch/touch-0.2.14.min.js"></script>
+<script>
+$(function setheight(){
+	var h = $(window).height();
+	var w = $(window).width();
+	var th = $(document.body).outerHeight(true);
+	$('.g_bg').height(h).css({
+		'background':'url(images2-1/m-bg_03.png) no-repeat ',
+		'background-size':'contain',
+		'background-position':'center',
+		'background-color':'#7dcdc7',
+		})
+});
+var shake=function(){
+			$('.g_box ul li').addClass('anim');
+			$('.g_tip1').addClass('anim');
+			$('.g_tip2').addClass('anim');
+		setTimeout(function(){
+			$('.g_box ul li').removeClass('anim');
+			$('.g_tip1').removeClass('anim');
+			$('.g_tip2').removeClass('anim');
+			},500);}
+			
+$('.g_box').click(shake);
+
+$(function(){
+	$('.bxslider').bxSlider({
+		controls: false,
+		onSlideNext:function(){
+			$('.g_box ul li').addClass('anim');
+			$('.g_tip1').addClass('anim');
+			$('.g_tip2').addClass('anim');
+		setTimeout(function(){
+			$('.g_box ul li').removeClass('anim');
+			$('.g_tip1').removeClass('anim');
+			$('.g_tip2').removeClass('anim');
+			},500);
+			},
+		onSlidePrev:function(){
+			$('.g_box ul li').addClass('anim');
+			$('.g_tip1').addClass('anim');
+			$('.g_tip2').addClass('anim');
+		setTimeout(function(){
+			$('.g_box ul li').removeClass('anim');
+			$('.g_tip1').removeClass('anim');
+			$('.g_tip2').removeClass('anim');
+			},500);
+			},
+	  })
+	$('.bx-viewport').css(
+	{
+		'border':'none',
+		'background':'none',
+		'-moz-box-shadow':'none',
+		'-webkit-box-shadow':'none'
+	})
+
+});
+
+$('.it1').click(function(e) {
+	$('.pos2').removeClass('highlight');
+	$('.pos3').removeClass('highlight');
+	$('.pos1').addClass('highlight');
+});
+
+$('.it2').click(function(e) {
+	$('.pos1').removeClass('highlight');
+	$('.pos3').removeClass('highlight');
+	$('.pos2').addClass('highlight');
+});
+
+$('.it3').click(function(e) {
+    $('.pos1').removeClass('highlight');
+	$('.pos2').removeClass('highlight');
+	$('.pos3').addClass('highlight');
+});
+
+$('.g_btn').click(function(e) {
+    $('#cover').show();
+	$('.g_coup').hide();
+	$('.g_con').show();
+});
+
+$('.g_btn2').click(function(e) {
+    $('.g_con').hide();
+	$('.g_coup').show();
+});
+
+$('.g_btn3').click(function(e) {
+    $('.g_coup').hide();
+	$('.g_share').show();
+});
+
+$('.clo_btn').click(function(e) {
+    $('#cover').hide();
+	$('.g_con .g_coup').hide();
+});
+
+</script>
+</body>
+</html>

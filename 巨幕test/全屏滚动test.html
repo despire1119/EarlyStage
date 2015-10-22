@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE>巨幕-tester</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<link rel=stylesheet type=text/css href="myslider.css" >
+
+<META name=GENERATOR content="MSHTML 8.00.6001.19222"></HEAD>
+<BODY>
+<div id="slide-index">
+	<div class=slides>
+		<div class="slide autoMaxWidth">
+			<div id=bi_0 class=image><A href="#"><img src="images/makeup01.jpg"></A></div>
+			<div id=bt_0 class=text></div>
+			<div id=bb_0 class=button></div>
+		</div>
+		<div class="slide autoMaxWidth">
+			<div id=bi_0 class=image><A href="#"><img src="images/makeup02.jpg"></A></div>
+			<div id=bt_0 class=text></div>
+			<div id=bb_0 class=button></div>
+		</div>
+		<div class="slide autoMaxWidth">
+			<div id=bi_0 class=image><A href="#" ><img src="images/makeup03.jpg"></A></div>
+			<div id=bt_0 class=text></div>
+			<div id=bb_0 class=button></div>
+		</div>
+	</div>
+	<div class=control><A href="#"></A><A href="#"></A><A href="#"></A></div>
+</div>
+<script type="text/javascript" src="http://www.houxue.com/js/jquery/jquery.min.js"></script>
+<script type=text/javascript>
+$(function(){	
+	indexSlides.ini();
+});
+var indexSlides={};
+indexSlides.timer=false;
+indexSlides.total=$('#slide-index .control a').length;
+indexSlides.current=-1;
+indexSlides.offScreenLeft=2000;
+indexSlides.leaveScreenLeft=4000;
+indexSlides.animating=false;
+indexSlides.obj=$('#slide-index .slide');
+indexSlides.style=[];
+indexSlides.style[0]={
+	text:{left:'30px',top:'81px'},
+	button:{left:'30px',top:'244px'},
+	direction:'tb'
+};
+	
+indexSlides.style[1]={
+	text:{left:'30px',top:'81px'},
+	button:{left:'30px',top:'244px'},
+	direction:'tb'
+};
+	
+indexSlides.style[2]={
+	text:{left:'30px',top:'81px'},
+	button:{left:'30px',top:'244px'},
+	direction:'tb'
+};
+</script>
+<script type=text/javascript src="myslider.js"></script>
+</BODY>
+</HTML>

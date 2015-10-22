@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0;}
+
+#slide-index {position: relative; min-width: 1000px; width: auto; height:535px; overflow: hidden}
+#slide-index .slides {min-width: 1000px; width: auto;}
+#slide-index .slide {position: relative; min-width: 1000px; float: left; height:535px}
+#slide-index .image {z-index: 1; position: absolute}
+#slide-index .button {width: 138px; display: none}
+#slide-index .control {z-index:40; position: absolute; text-align: center; width: 100%; bottom:0; height: 19px; cursor: pointer}
+#slide-index .control a{background:#666; filter: alpha(opacity=60); width: 10px; border-radius:5px; display: inline-block; background-repeat: no-repeat; height: 11px; cursor: pointer; margin-right: 6px; opacity: 0.6}
+#slide-index .control a:hover {background:#999; filter: alpha(opacity=100); opacity: 1}
+#slide-index .control a.active {background:#FFF; filter: alpha(opacity=100); opacity: 1}
+.autoMaxWidth {position: relative; height: 232px; overflow: hidden}
+

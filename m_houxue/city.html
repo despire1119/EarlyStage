@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>厚学</title>
+<link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+  <!--svg图标-->
+  <div style="display:none;">
+    <svg><symbol id="return" viewBox="-20.989 -37.373 41.978 74.745"><path transform="matrix(1 0 0 -1 0 0)" d="M-18.699,4.482c-3.091-2.802-3.049-7.41,0.102-10.167l35.521-31.081c1.019-0.893,2.567-0.788,3.458,0.229 c0.891,1.019,0.788,2.567-0.23,3.458L-15.37-1.996c-0.945,0.828-0.956,2.015-0.038,2.847l35.592,32.256 c1.003,0.908,1.079,2.458,0.171,3.461c-0.91,1.003-2.459,1.079-3.462,0.17L-18.699,4.482z"></path></symbol></svg>
+  </div>
+  <!--end svg图标-->
+  <!--header-->
+  <header class="clearfix">
+    <div class="header_left">
+      <a href="javascript:;">
+        <span class="l header_map"><svg><use xlink:href="#return"></use></svg></span>
+        <span class="l">返回</span>
+      </a>
+    </div>
+   
+    <div class="header_center">
+      <h1>切换城市<h1>
+    </div>
+  </header>
+  <!--end header-->
+  <!--section-->
+  <section>
+    <div class="now_city">
+      <p>当前定位城市：南京</p>
+    </div>
+    <div class="city">
+      <h2>热门城市</h2>
+      <ul class="clearfix">
+        <li><a href="javascript:;">北京</a></li>
+        <li><a href="javascript:;">武汉</a></li>
+        <li><a href="javascript:;">成都</a></li>
+        <li><a href="javascript:;">大同</a></li>
+        <li><a href="javascript:;">合肥</a></li>
+        <li><a href="javascript:;">南京</a></li>
+        <li><a href="javascript:;">太原</a></li>
+        <li><a href="javascript:;">南宁</a></li>
+        <li><a href="javascript:;">大连</a></li>
+        <li><a href="javascript:;">济南</a></li>
+        <li><a href="javascript:;">深圳</a></li>
+        <li><a href="javascript:;">泉州</a></li>
+      </ul>
+      <h2>A</h2>
+      <ul class="clearfix">
+        <li><a href="javascript:;">鞍山</a></li>
+        <li><a href="javascript:;">安庆</a></li>
+        <li><a href="javascript:;">安阳</a></li>
+        <li><a href="javascript:;">安康</a></li>
+      </ul>
+      <h2>B</h2>
+      <ul class="clearfix">
+        <li><a href="javascript:;">北京</a></li>
+        <li><a href="javascript:;">保定</a></li>
+        <li><a href="javascript:;">包头</a></li>
+        <li><a href="javascript:;">蚌埠</a></li>
+      </ul>
+    </div>
+  </section>
+  <!--end section-->
+
+  
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script>
+	/*默认字号调整*/
+        (function (doc, win) {
+          var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+              var clientWidth = docEl.clientWidth;
+			  /*if(clientWidth > 1080)
+			  {
+			  	clientWidth=1080;
+				docEl.style.fontSize = 67.5 + 'px';
+			  }*/
+              if (!clientWidth) return;
+              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            };
+
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+</script>
+</body>
+</html>

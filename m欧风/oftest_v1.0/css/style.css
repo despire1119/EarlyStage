@@ -1,0 +1,333 @@
+html {
+    width: 100%;
+    font-family: 微软雅黑;
+    font-size: 20px;
+    outline:none;
+	-webkit-text-size-adjust: none;
+}
+body, div, ol, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dd,figure, form, input, textarea{margin: 0;padding: 0;}
+body{
+	background-color:#f5f5f5;color:#666;font-family: "微软雅黑";
+}
+ul,ol{list-style:none;}
+img{border:none;}
+a{text-decoration: none;}
+.clearfix:after{ content: '\200B'; display: block; clear: both; height: 0; overflow: hidden; visibility: hidden;}
+.clearfix{zoom:1;}  /*清除浮动*/
+.r{float: right;}
+.l{float: left;}
+.orange{color:#ea8010;}
+.f7{font-size: 0.7rem;}
+.f8{font-size: 0.8rem;}
+
+#header{background:#fff;height: 3.5rem;}
+#header .logo{width: 5.25rem;height:2.5rem;background: url(../images/of_logo.png) no-repeat;background-size: 100% 100%;float: left;margin-top:0.5rem;margin-left:0.5rem;}
+#header .logo a{width: 5.25rem;height:2.5rem;display: block;}
+#header .telephone{width: 6.85rem;height:1.8rem;background: url(../images/telephone.png) no-repeat;background-size: 100% 100%;float:right;margin-top:1.25rem;margin-right:0.5rem;}
+#nav{background: #f28e1d;padding: 0.07rem 0.5rem;color: #fff;font-size: 0.7rem;}
+#nav a{color: #fff;font-size: 0.7rem;}
+.adv_map{position: relative;}
+.adv_map a{display: block;}
+.adv_map_drop{position: absolute;left: 40%;bottom: 0.4rem;}
+.adv_map_drop li{float: left;width: 0.25rem;height: 0.25rem;background: #fff;margin-right:0.4rem;border-radius: 0.13rem;}
+.adv_map_drop .one{background: #999;}
+
+/*学校简介*/
+.introduction{padding: 0.5rem;border-bottom:1px solid #e6e6e6;margin-bottom: 0.5rem;background: #fff;}
+.introduction h2{font-size: 0.8rem;border-bottom:1px solid #92c605;padding-bottom: 0.2rem;margin-bottom: 0.35rem;}
+.introduction .left{width:0.8rem;height:0.9rem;background: url(../images/introduction_l.png) no-repeat;background-size: 100% 100%; margin-right: 0.25rem;margin-top:0.1rem;}
+.introduction .right{width: 5rem;height: 0.8rem;background: url(../images/introduction_r.png) no-repeat;background-size: 100% 100%;margin-top:0.25rem;}
+.introduction p{text-indent:1.25rem;font-size: 0.7rem;line-height: 1.1rem;}
+.footer_nav{padding: 0.5rem;background: #fff;border-bottom:1px solid #e6e6e6;border-top:1px solid #e6e6e6;margin-bottom: 0.5rem;}
+.footer_nav li{width:5rem;float: left;text-align: center;margin-bottom: 0.5rem;margin-top: 0.5rem;}
+.footer_nav li img{width: 3rem;height: 3rem;}
+.footer_nav p{font-size: 0.8rem;color: #666;}
+.footer_nav a{display: block;}
+.school{background: url(../images/school.png) no-repeat;background-size: 100% 100%;}
+.teacher{background: url(../images/teacher.png) no-repeat;background-size: 100% 100%;}
+.student{background: url(../images/student.png) no-repeat;background-size: 100% 100%;}
+.serve{background: url(../images/serve.png) no-repeat;background-size: 100% 100%;}
+.scenery{background: url(../images/scenery.png) no-repeat;background-size: 100% 100%;}
+.enroll{background: url(../images/enroll.png) no-repeat;background-size: 100% 100%;}
+/*课程介绍*/
+.course{padding: 0.5rem;background: #fff;border-bottom:1px solid #e6e6e6;margin-bottom: 0.5rem;}
+.course h2{font-size: 0.9rem;color: #333;text-align: center;font-weight: bold;border-bottom:1px solid #92c605;padding-bottom: 0.2rem;margin-bottom: 0.35rem;}
+.course p{font-size: 0.7rem;line-height: 1.1rem;}
+.center_map{margin-bottom: 0.5rem;width: 100%;}
+.evaluate{background: #fff;border-top:1px solid #e6e6e6;margin-bottom: 0.5rem;}
+.evaluate h3{font-size: 0.8rem;border-bottom:1px solid #e6e6e6;padding: 0.5rem;}
+.evaluate .of_more{width: 1rem;height: 0.6rem;background: url(../images/1-more0.png) no-repeat;background-size: 100% 100%;margin-top:0.2rem;margin-left:0.25rem;}
+.evaluate li{padding: 0.5rem;border-bottom:1px solid #e6e6e6;}
+.evaluate .left{width: 2.5rem;height:2.5rem;border-radius:1.25rem;margin-right: 0.5rem;overflow: hidden;}
+.evaluate .right{font-size: 0.7rem;width:12rem;}
+.columns{background: #fff;border-top:1px solid #e6e6e6;margin-bottom: 0.5rem;}
+.columns h3{font-size: 0.8rem;border-bottom:1px solid #e6e6e6;padding: 0.5rem;}
+.columns li{padding: 0.5rem;border-bottom:1px solid #e6e6e6;}
+.columns li a{display: block;}
+.columns .left{background: url(../images/pencil.png) no-repeat;background-size: 100% 100%;width: 1rem;height: 1rem;margin-right: 0.5rem;}
+.columns .right{background: url(../images/more1.png) no-repeat;background-size: 100% 100%;width: 1rem;height: 1rem;margin-top: 0.05rem;}
+.columns .center{color: #666;}
+.btn{padding:0 0.5rem;margin-bottom:0.5rem;}
+.btn a{display: block;width: 7rem;height: 2rem;background:#92c605;border-radius: 0.2rem;box-shadow:0 0.025rem 0.05rem 0.05rem #6e9601;line-height: 2rem;color: #fff;font-size: 0.8rem;font-weight: bold;}
+.btn .btn_left{background: url(../images/btn_computer.png) no-repeat;background-size: 100% 100%;width: 1.2rem;height: 1.1rem;margin:0.5rem 0.2rem 0 1rem;}
+.btn .btn_right{background: url(../images/btn_telephone.png) no-repeat;background-size: 100% 100%;width: 1.4rem;height: 1.1rem;margin:0.45rem 0.2rem 0 1rem;}
+.footer{margin-bottom:0.5rem;width: 100%;}
+
+/*课程列表*/
+.course_list_nav{padding: 0.5rem;background: #fff;border-bottom:1px solid #e6e6e6;}
+.course_list_nav a{display: block;width:3.5rem;height: 1.4rem;background: #75c2f7;color: #fff;font-size: 0.7rem;line-height: 1.4rem;text-align: center;border-radius: 0.7rem;margin: 0 auto;float: left;margin: 0 0.7rem;}
+.course_list_nav .dynamic_up_one{background: #37aaf8;}
+.course_list{background: #fff;margin-bottom: 0.5rem;display:none;}
+.course_list_one{display: block;background: #fff;margin-bottom: 0.5rem;}
+.course_list li{padding: 0.5rem;border-bottom:1px solid #e6e6e6;}
+.course_list li a{display: block;}
+.course_list .left{width:3.8rem;margin-right: 0.5rem;float: left;}
+.course_list .right{width: 10.5rem;float: left;}
+.course_list .right h3{font-size: 0.8rem;font-weight: bold;color: #333;}
+.course_list .right p{font-size: 0.7rem;color: #666;}
+.course_list .right span{color: #75c2f7;}
+
+/*老师详情*/
+.teacher_detail{padding: 0.5rem;background: #fff;margin-bottom: 0.5rem;border-bottom:1px solid #e6e6e6;}
+.teachers{margin-bottom: 0.5rem;text-align: center;}
+.teachers h2{width: 100%;color: #333;font-size: 0.9rem;font-weight: bold;margin-bottom: 0.5rem;}
+.detail p{font-size: 0.7rem;text-indent: 1.25rem;}
+.h_top{
+	background:url(../images/1-top.jpg) no-repeat;
+	background-size:100% 100%;
+	background-position:center;
+	height:8.4rem
+}
+#h_navigation{
+	padding-left:.25rem;
+	padding-right:.25rem;
+	height:12.3rem;
+	padding-top:.5rem;
+	padding-bottom:.5rem;
+	margin-bottom:.5rem;
+	background-color:#ffffff
+}
+.navig_size{
+	float:left;
+	width:3.8rem;
+	height:4.1rem;
+}
+.navig_size a{
+	display: block;
+}
+.navig_size span{
+	width:100%;
+	font-size:.6rem;
+	color:#666666;
+}
+.right_bottom{
+	border-right:1px solid #e5e5e5;
+	border-bottom:1px solid #e5e5e5;
+}
+.bottom{
+	border-bottom:1px solid #e5e5e5;
+}
+.right_r{
+	border-right:1px solid #e5e5e5;
+}
+.ger{
+	background:url(../images/1-03.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.fran{
+	background:url(../images/1-04.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.ita{
+	background:url(../images/1-05.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem	
+}
+.syd{
+	background:url(../images/1-06.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.kor{
+	background:url(../images/1-07.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.jap{
+	background:url(../images/1-08.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.por{
+	background:url(../images/1-09.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.ara{
+	background:url(../images/1-10.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.formation{
+	background:url(../images/1-11.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.guide{
+	background:url(../images/1-12.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.ser{
+	background:url(../images/1-13.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.sign{
+	background:url(../images/1-14.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+	height:3rem
+}
+.list_tit{
+	margin-top:.5rem;
+	border:1px solid #e5e5e5;
+	background:#ffffff;
+}
+.list_tit a{
+	display: block;
+	height:1.8rem;
+	width:100%;
+}
+.list_tit img{
+	float:left;
+	width:1.35rem;
+	height:1.35rem;
+	margin-left:.5rem;
+	margin-right:.5rem;
+	padding-top:.25rem;
+	padding-bottom:.25rem;
+}
+.tit_font{
+	float:left;
+	height:100%;
+	font-size:.7rem;
+	line-height:1.8rem;
+	color:#f28e1d;
+}
+.more{
+	float:right;
+	font-size: .5rem;
+	line-height: 1.8rem;
+	color:#a5a5a5;
+	width:2.7rem;
+	height:100%;
+	margin-right:.5rem;
+	background:url(../images/1-more0.png) no-repeat;
+	background-position:right;
+}
+.list{
+	height:1.8rem;
+	border-bottom:1px solid #e5e5e5;
+	background-color:#ffffff;
+}
+.list a{
+	display: block;
+	height:1.8rem;
+	width:100%;
+}
+.list img{
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	margin-left: .7rem;
+	margin-right: .7rem;
+	padding-top: .4rem;
+	padding-bottom: .4rem;
+}
+.list .more{
+	float:right;
+	color:#a5a5a5;
+	width:1rem;
+	height:100%;
+	margin-right:.5rem;
+	background:url(../images/more1.png) no-repeat;
+	background-size:contain;
+	background-position:center;
+}
+.list_font{
+	float:left;
+	height:100%;
+	font-size:.6rem;
+	line-height:1.8rem;
+	color:#666666;
+}
+.ph_g0{
+	float:left;
+	margin-left:.5rem;
+	margin-top:.5rem;
+	margin-bottom:.5rem;
+	width:7.75rem;
+	height:9.75rem;
+	background:#666;
+	background:url(../images/1-ph0.jpg) no-repeat;
+	background-size:contain;
+	background-position:centerl;
+}
+.ph_g0 a{
+	display: block;
+	width:6.75rem;
+	height:9.75rem;
+}
+.ph_g1{
+	float:left;
+	margin-left:.5rem;
+	margin-top:.5rem;
+	width:6.75rem;
+	height:4.625rem;
+	background:#666;
+	background:url(../images/1-ph1.jpg) no-repeat;
+	background-size:contain;
+	background-position:centerl;
+}
+.ph_g1 a{
+	display: block;
+	width:6.75rem;
+	height:4.625rem;
+}
+.ph_g2{
+	float:left;
+	margin-left:.5rem;
+	margin-top:.5rem;
+	margin-bottom:.5rem;
+	width:6.75rem;
+	height:4.625rem;
+	background:#666;
+	background:url(../images/1-ph2.jpg) no-repeat;
+	background-size:contain;
+	background-position:centerl;
+}
+.ph_g2 a{
+	display: block;
+	width:6.75rem;
+	height:4.625rem;
+}
+
+
+
+
+
+

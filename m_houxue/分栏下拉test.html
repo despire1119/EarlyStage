@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<title>无标题文档</title>
+<link href="css/layout.css" rel="stylesheet" >
+<link href="css/common_base.css" rel="stylesheet">
+<style>
+.top{
+	height:2.5rem;
+	background:#f4535c;
+}
+.cont{
+	height:1.65rem;
+	background:#f0f0f0;
+	border:1px solid #cccccc;
+}
+.guid_1{
+	height:1.8rem;
+	border-bottom:.05rem solid #cccccc;
+	vertical-align:central
+}
+.guid_1 li{
+	height:1rem;;
+	float:left;
+	width:5.28rem;
+	border-right:0.05rem solid #cccccc;
+	text-align:center;
+	padding:.4rem 0;
+}
+.one{
+	background:#fff;
+	width:6.3rem;
+}
+.guid_2{
+	width:5.9rem;
+	height:10rem;
+	overflow:auto;
+	overflow-x:hidden;
+
+}
+.guid_2 li{
+	width:5.9rem;
+	height:1rem;
+	padding:.4rem 0;
+	border-bottom:.05rem solid #cccccc;
+	text-align:left
+}
+.guid_3{
+	position:fixed;
+	height:11.1rem;
+	position:fixed;
+	left:5.85rem;
+	top:6.1rem;
+	overflow:auto;
+	width:100%;
+	overflow-x:hidden;
+}
+.guid_3 li{
+	text-align:left;
+	padding-left:1rem;
+	border-bottom:.05rem solid #CCCCCC;
+	background:#fff;
+	width:100%;
+}
+.visible{
+	width:5.9rem;
+	position:fixed;
+	left:0;
+	top:6.1rem;
+	overflow:hidden;
+	z-index:10;
+}
+</style>
+</head>
+
+<body>
+<div class="top"></div>
+<div class="cont"></div>
+<ul class="guid_1">
+	<li id="fenlei">
+    	<span>分类</span>
+    </li>
+    <li id="paixu">
+    	<span>排序</span>
+    </li>
+    <li id="shaixuan">
+    	<span>筛选</span>
+        <div class="visible">
+        <ul class="guid_2">
+        	<li class="">
+            <span>综合筛选</span>
+            </li>
+            <li class="one"><span>地区</span></li>
+            <li><span>价格筛选</span></li>
+        	<li><span>上课时间筛选</span></li>
+            <li><span>上课方式</span></li>
+        </ul>
+        </div>
+                <ul class="guid_3">
+                <li>全城</li>
+                <li>江宁区</li>
+                <li>鼓楼区</li>
+                <li>秦淮区</li>
+                <li>栖霞区</li>
+                <li>白下区</li>
+                <li>XX区</li>
+                <li>XX区</li>
+                <li>XX区</li>
+                <li>XX区</li>
+                <li>XX区</li>
+            	</ul>
+</ul>
+<script type="text/javascript" src="../../baseofhtml/jquery.js"></script>
+<script>
+	/*默认字号调整*/
+(function (doc, win) {
+	var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+    	var clientWidth = docEl.clientWidth;
+			  /*if(clientWidth > 1080)
+			  {
+			  	clientWidth=1080;
+				docEl.style.fontSize = 67.5 + 'px';
+			  }*/
+    	if (!clientWidth) return;
+              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+    };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+
+/*	
+var h = $(window).height();
+var w = $(window).width();
+$('.h_bg').css('height',h);
+$('.h_bg').css('width',w);
+
+
+$(function(){setTimeout(onWidthChange,100);});
+ 
+function onWidthChange()
+{
+	var h = $(window).height();
+	var w = $(window).width();
+	$('.h_bg').css('height',h);
+	$('.h_bg').css('width',w);
+	setTimeout(onWidthChange,100);
+};
+
+*/
+$(function(){
+    $('.l_right').find('.l_left_top a').hover(function(){
+        $('.l_right').find('.l_left_top a').attr('class','');
+        $('.l_right').find('.text_field').css('display','none');
+        $(this).attr('class','one');
+        $('.l_right').find('.text_field').eq( $(this).index() ).css('display','block');   
+    }); 
+});
+$(event.target)
+</script>
+</body>
+</html>
